@@ -1,10 +1,8 @@
-from algebra import polynomials
-import math
+from calculus import operators
 
-o = polynomials.Theorems()
-primes = []
-for i in range(1,1000000):
-    p = polynomials.Primes().generateprimes()
-    if p not in primes:
-        print p
-        primes.append(p)
+style = operators.Differential()
+
+f = style.Function("3x^32 + 5280x^23 + 91x")
+
+print(style.derivative(14, f))
+
